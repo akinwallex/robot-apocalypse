@@ -4,6 +4,7 @@
  */
 package com.akinwale.apocalypsewebservice.application;
 
+import com.akinwale.apocalypsewebservice.service.RobotResource;
 import com.akinwale.apocalypsewebservice.service.SurvivorResource;
 import java.util.HashSet;
 import java.util.Set;
@@ -20,6 +21,7 @@ public class ApocalypseApplication extends Application{
     public Set<Class<?>> getClasses() {
         HashSet<Class<?>> set = new HashSet<Class<?>>();
         set.add(SurvivorResource.class);
+        set.add(RobotResource.class);
         return set;
     }
 }

@@ -3,6 +3,7 @@
   <persistence-unit name="ApocalypseWebservice_PU" transaction-type="JTA">
     <jta-data-source>jdbc/Apocalypse_Datasource</jta-data-source>
     <class>com.akinwale.apocalypsewebservice.entity.Survivor</class>
+    <class>com.akinwale.apocalypsewebservice.entity.Resource</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/apocalypse?zeroDateTimeBehavior=CONVERT_TO_NULL"/>

@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -43,9 +44,10 @@ public class Survivor implements Serializable {
     @NotNull
     private Location location;
     private boolean infected;
-    @ElementCollection
+    
     @NotNull
     @XmlElementWrapper
+    @OneToMany(mappedBy = "survivor")
     private List<Resource> resources;
     public Survivor(){
         infected = false;
